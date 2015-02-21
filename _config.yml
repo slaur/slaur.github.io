@@ -1,0 +1,19 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Slaur
+tagline:          A blog about web experiments
+url:              https://github.com/slaur/slaur.github.io
+paginate:         1
+baseurl:          /
+author:
+  name:           S. Laur
+  url:            https://github.com/slaur/slaur.github.io
+  email:          
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/slaur/slaur.github.io
