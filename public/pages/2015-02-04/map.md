@@ -18,19 +18,14 @@ scripts:
 <div id="wrapper">
   <div id="map"></div>
   <div id="nav">
+    <p>Paris taxis stations (2011)</p>
     <div id="filters" style="margin-bottom: 10px;"></div>
     <div>
-      <form class="form-inline">
-        <div class="checkbox">
-          <label>
-            <input class="form-control" type="checkbox" id="showZones"> Districts
-          </label>
-          <label>
-            <input class="form-control" type="checkbox" id="showClusters"> Clustering
-          </label>
-          <a href="/" class="btn btn-link btn-xs">Back to blog</a>
-        </div>
-      </form>
+      <input type="checkbox" id="showZones" style="margin-right: 5px;">
+      <label for="showZones" style="margin-right: 20px;">Districts</label>
+      <input type="checkbox" id="showClusters" style="margin-right: 5px;">
+      <label for="showClusters" style="margin-right: 20px;">Clustering</label>
+      <a href="{% post_url 2015-02-04-map-experiment %}" class="btn btn-link btn-xs">Back to blog</a>
     </div>
   </div>
 </div>

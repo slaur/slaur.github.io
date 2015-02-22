@@ -9,7 +9,7 @@ I used [MapBox](https://www.mapbox.com/) and [Leaflet.markercluster](https://git
 
 - Why Paris taxi stations ?
 
-  - It's one the first set of data that showed up when I looked at [Open Data Paris](http://opendata.paris.fr). Yes I'm this kind of guy...
+  - It's one of the first sets of data that showed up when I looked at [Open Data Paris](http://opendata.paris.fr). Yes I'm this kind of guy...
 
 So let's create a basic map and add some markers from a geoJSON file. Each district (with a distinct zip code) has its color :
 
@@ -49,7 +49,7 @@ map.addLayer(clusterGroup);
 That was fine but i wanted to group my markers by district, and show clusters with different colors.
 So I decided to create several cluster layers, one per district. The `ready` event is fired when geoJSON markers have been added.
 
-You can bind a function to each single marker that will be added to this layer. I put each marker in it's district cluster.
+You can bind a function to each single marker that will be added to this layer. I put each marker in its district cluster.
 
 {% highlight javascript %}
 featureLayer.on('ready', function(e) {

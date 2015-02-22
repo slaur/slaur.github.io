@@ -30,7 +30,6 @@ $(document).ready(function() {
   })
   .setView([48.856, 2.354], 12)
   .addLayer(L.mapbox.tileLayer(mapId));
-  var legendControl = map.addControl(L.mapbox.legendControl().addLegend('Paris taxis stations (2011)'));
 
   //Feature layer (markers)
   var featureLayer = L.mapbox.featureLayer();
