@@ -3,15 +3,11 @@ layout: post
 title: Map experiment
 ---
 
-I wanted to start with a map, it's a nice warm up and who doesn't love maps ?
-
 I used [MapBox](https://www.mapbox.com/) and [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) to display Paris taxi stations, grouped by districts.
 
-- Why Paris taxi stations ?
+Data is available at [Open Data Paris](http://opendata.paris.fr)
 
-  - It's one of the first sets of data that showed up when I looked at [Open Data Paris](http://opendata.paris.fr). Yes I'm this kind of guy...
-
-So let's create a basic map and add some markers from a geoJSON file. Each district (with a distinct zip code) has its color :
+Create a basic map and add some markers from a geoJSON file. Each district (with a distinct zip code) has its color :
 
 {% highlight javascript %}
 var mapId = 'YourMapId';
@@ -33,7 +29,7 @@ featureLayer.addTo(map);
 featureLayer.loadURL(dataUrl);
 {% endhighlight %}
 
-I was mainly interested into markers clusters. [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) makes it easy :
+Add markers clusters using [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) :
 
 {% highlight javascript %}
 //Remove single markers
@@ -46,8 +42,8 @@ featureLayer.eachLayer(function(layer) {
 map.addLayer(clusterGroup);
 {% endhighlight %}
 
-That was fine but i wanted to group my markers by district, and show clusters with different colors.
-So I decided to create several cluster layers, one per district. The `ready` event is fired when geoJSON markers have been added.
+Group markers by district, and show clusters with different colors.
+There are several cluster layers, one per district. The `ready` event is fired when geoJSON markers have been added.
 
 You can bind a function to each single marker that will be added to this layer. I put each marker in its district cluster.
 
