@@ -1,6 +1,6 @@
 # Slaur
 
-Welcome to my experimental blog.
+Experimental blog.
 
 -----
 
